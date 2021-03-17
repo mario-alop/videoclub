@@ -24,7 +24,7 @@ class Fecha():
 
     def formato_largo(self):
         meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio',
-                 'Agosto', 'septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+                'Agosto', 'septiembre', 'Octubre', 'Noviembre', 'Diciembre']
         
         return '{0} de {1} de {2}'.format(self.dia, meses[self.mes-1], self.año)
     
@@ -73,7 +73,7 @@ class Fecha():
         return self
     
     def dias_transcurridos(self, fecha2):
-               
+        
         fecha1 = date(self.año, self.mes, self.dia)
         fecha2 = date(fecha2.año, fecha2.mes, fecha2.dia)
         contador = (fecha1 - fecha2).days
@@ -83,7 +83,7 @@ class Fecha():
         fecha = date(self.año, self.mes, self.dia)
         #dia = fecha.strftime('%A')
         dic_dias={'MONDAY':'Lunes','TUESDAY':'Martes','WEDNESDAY':'Miercoles','THURSDAY':'Jueves',
-                 'FRIDAY':'Viernes','SATURDAY':'Sabado','SUNDAY':'Domingo'}
+                'FRIDAY':'Viernes','SATURDAY':'Sabado','SUNDAY':'Domingo'}
         dia = (dic_dias[fecha.strftime('%A').upper()])
         return dia  
 
